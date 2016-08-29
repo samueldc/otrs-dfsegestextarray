@@ -1,14 +1,10 @@
 # --
 # DynamicFieldSegesTextArray.pm - code run during package de-/installation
-# Copyright (C) 2006-2016 c.a.p.e. IT GmbH, http://www.cape-it.de
+# Copyright (C) 2016 samueldc, http://www.camara.leg.br
 #
 # written/edited by:
-# * Torsten(dot)Thau(at)cape(dash)it(dot)de
-# * Anna(dot)Litvinova(at)cape(dash)it(dot)de
+# * nedmaj(at)yahoo(dot)com
 #
-# --
-# $Id: DynamicFieldSegesTextArray.pm,v 1.4.2.1 2016/05/18 09:52:50 tto Exp $
-# --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
@@ -21,9 +17,6 @@ use warnings;
 
 use Kernel::System::VariableCheck qw(:all);
 use List::Util qw(min);
-
-use vars qw(@ISA $VERSION);
-$VERSION = qw($Revision: 1.4.2.1 $) [1];
 
 our @ObjectDependencies = (
     'Kernel::System::SysConfig',
@@ -182,7 +175,7 @@ sub CodeUninstall {
     my ( $Self, %Param ) = @_;
 
     # remove Dynamic Fields and its values
-    $Self->_DynamicFieldsDelete();
+    #$Self->_DynamicFieldsDelete();
 
     return 1;
 }
@@ -271,8 +264,3 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 
 =cut
 
-#-------------------------------------------------------------------------------
-
-=head1 VERSION
-$Revision: 1.4.2.1 $ $Date: 2016/05/18 09:52:50 $
-=cut

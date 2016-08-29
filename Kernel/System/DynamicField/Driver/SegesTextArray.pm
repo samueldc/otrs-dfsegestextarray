@@ -1,11 +1,10 @@
 # --
 # Kernel/System/DynamicField/Driver/SegesTextArray.pm - based on existing OTRS-Backends - Delegate for DynamicField SegesTextArray backend
-# Copyright (C) 2006-2016 c.a.p.e. IT GmbH, http://www.cape-it.de
+# Copyright (C) 2016 samueldc, http://www.camara.leg.br
 #
 # written/edited by:
-# * Mario(dot)Illinger(at)cape(dash)it(dot)de
-# * Anna(dot)Litvinova(at)cape(dash)it(dot)de
-# --
+# * nedmaj(at)yahoo(dot)com
+#
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
