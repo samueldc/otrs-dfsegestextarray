@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.1">
+    <Name>DynamicFieldSegesTextArray</Name>
+    <Version>1.0.0</Version>
+    <Vendor>Seges</Vendor>
+    <URL>http://www.camara.leg.br/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <ChangeLog Version="1.0.0" Date="2016-08-22 16:12:00">First version.</ChangeLog>
+    <Description Lang="en">DynamicField backend to provide text array for OTRS</Description>
+    <Framework>4.0.x</Framework>
+    <IntroInstall Lang="en" Title="Install Information" Type="pre">You are about to install DynamicFieldSegesTextArray for OTRS.</IntroInstall>
+    <IntroInstall Lang="en" Title="Install Information" Type="post">The package has been installed.</IntroInstall>
+    <IntroUninstall Lang="en" Title="Uninstall Information" Type="pre">You are about to UNINSTALL DynamicFieldSegesTextArray for OTRS.</IntroUninstall>
+    <IntroUninstall Lang="en" Title="Uninstall Information" Type="post">The package has been uninstalled.</IntroUninstall>
+    <IntroUpgrade Lang="en" Title="Upgrade Information" Type="pre">You are about to upgrade DynamicFieldSegesTextArray for OTRS.</IntroUpgrade>
+    <IntroUpgrade Lang="en" Title="Upgrade Information" Type="post">The package has been upgraded.</IntroUpgrade>
+    <CodeInstall Type="post"><![CDATA[
+    $Kernel::OM->Get('var::packagesetup::DynamicFieldRemoteDB')->CodeInstall();
+    ]]></CodeInstall>
+    <CodeUpgrade Type="post"><![CDATA[
+    $Kernel::OM->Get('var::packagesetup::DynamicFieldRemoteDB')->CodeUpgrade();
+    ]]>
+    </CodeUpgrade>
+    <CodeUninstall Type="pre"><![CDATA[
+    $Kernel::OM->Get('var::packagesetup::DynamicFieldRemoteDB')->CodeUninstall();
+    ]]>
+    </CodeUninstall>
+    <CodeReinstall Type="post"><![CDATA[
+    $Kernel::OM->Get('var::packagesetup::DynamicFieldRemoteDB')->CodeReinstall();
+    ]]>
+    </CodeReinstall>
+    <BuildDate>2016-08-22 16:12:00</BuildDate>
+    <BuildHost>www.camara.leg.br</BuildHost>
+    <Filelist>
+        <File Location="Kernel/Config/Files/DynamicFieldSegesTextArray.xml" Permission="664" Encode="Base64"></File>
+        <File Location="Kernel/Modules/AdminDynamicFieldSegesTextArray.pm" Permission="664" Encode="Base64"></File>
+        <File Location="Kernel/Output/HTML/Standard/AdminDynamicFieldSegesTextArray.tt" Permission="664" Encode="Base64"></File>
+        <File Location="Kernel/System/DynamicField/Driver/BaseSegesTextArray.pm" Permission="664" Encode="Base64"></File>
+        <File Location="Kernel/System/DynamicField/Driver/SegesTextArray.pm" Permission="664" Encode="Base64"></File>
+        <File Location="var/packagesetup/DynamicFieldSegesTextArray.pm" Permission="664" Encode="Base64"></File>
+    </Filelist>
+    <DatabaseInstall>
+    </DatabaseInstall>
+    <DatabaseUpgrade>
+    </DatabaseUpgrade>
+    <DatabaseReinstall>
+    </DatabaseReinstall>
+    <DatabaseUninstall>
+    </DatabaseUninstall>
+</otrs_package>

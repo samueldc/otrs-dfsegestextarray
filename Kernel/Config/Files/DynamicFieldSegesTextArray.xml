@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="1.0" init="Application">
+    <ConfigItem Name="Frontend::Module###AdminDynamicFieldSegesTextArray" Required="0" Valid="1">
+        <Description Translatable="1">Frontend module registration for the agent interface.</Description>
+        <Group>DynamicFields</Group>
+        <SubGroup>Frontend::Admin::ModuleRegistration</SubGroup>
+        <Setting>
+            <FrontendModuleReg>
+                <Group>admin</Group>
+                <Description>Admin</Description>
+                <Title Translatable="1">Dynamic Fields SegesTextArray Backend GUI</Title>
+                <Loader>
+                    <JavaScript>Core.Agent.Admin.DynamicField.js</JavaScript>
+                </Loader>
+            </FrontendModuleReg>
+        </Setting>
+    </ConfigItem>
+
+    <ConfigItem Name="DynamicFields::Driver###SegesTextArray" Required="0" Valid="1">
+        <Description Translatable="1">DynamicField backend registration.</Description>
+        <Group>DynamicFields</Group>
+        <SubGroup>DynamicFields::Driver::Registration</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="DisplayName">SegesTextArray</Item>
+                <Item Key="Module">Kernel::System::DynamicField::Driver::SegesTextArray</Item>
+                <Item Key="ConfigDialog">AdminDynamicFieldSegesTextArray</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+
+</otrs_config>
